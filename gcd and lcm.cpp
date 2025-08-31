@@ -20,3 +20,8 @@ int gcd(int a,int b){
 int lcm(int a,int b){
     return a/gcd(a,b)*b;
 }
+ // 1. GCD using inbuilt __gcd
+    cout << "gcd(24, 36) = " << __gcd(24,36) << endl; // 12
+
+    // 2. LCM using inbuilt lcm (C++17 and above, needs <numeric>)
+    cout << "lcm(12, 18) = " << lcm(12,18) << endl;   // 36
