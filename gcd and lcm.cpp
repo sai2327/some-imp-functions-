@@ -11,6 +11,12 @@ int gcd(int a,int b){
     }
     return a;
 }
+// Recursive GCD function
+int gcd(int a, int b) {
+    if(b == 0) return a;   // base case
+    return gcd(b, a % b);  // recursive step
+}
+
 
 /*
 2. Least Common Multiple (LCM)
@@ -18,7 +24,7 @@ int gcd(int a,int b){
    - Can use: lcm(a,b) in <numeric> (C++17 and above).
 */
 int lcm(int a,int b){
-    return a/gcd(a,b)*b;
+    return (a*b)/gcd(a,b);
 }
  // 1. GCD using inbuilt __gcd
     cout << "gcd(24, 36) = " << __gcd(24,36) << endl; // 12
